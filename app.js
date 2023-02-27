@@ -6,10 +6,13 @@ const errorhandler = require('errorhandler');
 require("./database");
 
 const app = express();
+exports.app = app;
 const PORT = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+require('./config/session.config');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
@@ -22,7 +25,7 @@ if(process.env.NODE_Env === "dev") {
     app.use(errorhandler);
 } else {
     app.use((err, req, res, next) => {
-        const code = err.code | 500;
+        const code = err.code || 500;
         res.status(code).json({
             code,
             message: code === 500 ? null : err.message
