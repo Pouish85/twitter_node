@@ -1,4 +1,4 @@
-const { createNewTweet, findAllTweets } = require("../queries/tweet.queries");
+const { createNewTweet, findAllTweets, findTweetAndDelete } = require("../queries/tweet.queries");
 
 exports.createTweet = async (req, res, next) => {
     try {
@@ -20,3 +20,15 @@ exports.tweetList = async (req, res, next) => {
         next(error)
     }
 }
+
+exports.deleteTweet = async (req, res, next) => {
+    try {
+       const tweetId = req.params.tweetId;
+       await findTweetAndDelete(tweetId);
+       res.redirect('/');
+    } catch (error) {
+        next(error);
+    }
+}
+
+// edit

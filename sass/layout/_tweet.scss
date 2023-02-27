@@ -51,56 +51,7 @@
                         text-align: right;
                     }
                 }
-                
-            }
-
-        }
-
-        .tweet-card {
-            width: 50%;
-            border: 1px solid $text-color;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            border-radius: 5px;
-
-            @include xs {
-                width: 100%;
-            }
-
-            &-author {
-
-                @include flex($justify: flex-start);
-                
-                img {
-                    width: 2rem;
-                }
-
-                p{
-                    margin-left: 1rem;
-                }
-            }
-
-            &-body {
-                padding: 1rem;
-            }
-
-            &-actions {
-
-                margin-top: 2rem;
-                border-top: 1px solid whitesmoke;
-                
-                @include flex($justify: space-around);
-                
-                i {
-                    margin-top: 1rem;
-                    font-size: 1.5rem;
-                    line-height: 1.5rem;
-                    cursor: pointer;
-                    color: $primary-color-dark;
-                }
-
             }
         }
-
     }
 }
