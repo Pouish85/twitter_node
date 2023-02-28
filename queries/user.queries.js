@@ -26,6 +26,6 @@ exports.findUserByEmail = (email) => {
 
 }
 
-exports.findUserById = (email) => {
+exports.findUserById = (id) => {
     return User.findById(id).exec();
 }

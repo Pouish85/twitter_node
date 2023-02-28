@@ -1,14 +1,23 @@
 section {
     padding: 50px;
 
+    
     @include flex;
-
+    
+    @include xs {
+        padding: 15px;
+    }
+    
     .content-box {
         width: 40%;
         padding: 30px;
         border: 1px solid $text-color;
         border-radius: 5px;
         background-color: $secondary-color;
+
+        @include xs {
+            width: 100%;
+        }
 
         .form-box {
             width: 100%;
