@@ -1,4 +1,4 @@
-const { createTweet, deleteTweet } = require('../controllers/tweet.controler');
+const { createTweet, deleteTweet, editTweet } = require('../controllers/tweet.controler');
 const router = require('express').Router();
 
 router.post('/new', createTweet);

@@ -8,6 +8,11 @@ a {
   cursor: pointer;
 }
 
+.text-danger {
+  margin-top: 10px;
+  color: #eb4d4b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -198,7 +203,7 @@ a {
 
 .content {
   background-color: #dfe6e9;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -209,6 +214,35 @@ a {
   .content {
     height: 100%;
   }
+}
+
+section {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section .content-box {
+  width: 40%;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #dfe6e9;
+}
+section .content-box .form-box {
+  width: 100%;
+}
+section .content-box .form-box .input-box {
+  margin-top: 1rem;
+}
+section .content-box .form-box .input-box input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #333;
+  outline-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

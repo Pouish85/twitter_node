@@ -14,5 +14,5 @@ exports.findTweetAndDelete = (tweetId) => {
 }
 
 // exports.editTweet = (tweetId) => {
-//     return Tweet.fin
+//     return Tweet.findByIdAndUpdate(tweetId).exec();
 // }

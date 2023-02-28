@@ -1,3 +1,4 @@
+const { findByIdAndUpdate } = require("../database/models/Tweet.model");
 const { createNewTweet, findAllTweets, findTweetAndDelet } = require("../queries/tweet.queries");
 
 exports.createTweet = async (req, res, next) => {
@@ -31,4 +32,12 @@ exports.deleteTweet = async (req, res, next) => {
     }
 }
 
-// edit
+// exports.editTweet = async (req, res, next) => {
+//     try {
+//         const tweetId = req.params.tweetId;
+//         await findByIdAndUpdate(tweetId);
+//         res.redirect('/');
+//     } catch (error) {
+//         next(error);
+//     }
+// }
