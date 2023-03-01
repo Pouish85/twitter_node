@@ -84,6 +84,9 @@ a {
     flex-wrap: wrap;
   }
 }
+.profile-container .profile {
+  background-color: #b2bec3;
+}
 @media (max-width: 480px) {
   .profile-container .profile {
     display: flex;
@@ -94,17 +97,24 @@ a {
   }
 }
 .profile-container .profile-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: #b2bec3;
 }
-.profile-container .profile-img img {
+.profile-container .profile-img form {
+  background-color: #b2bec3;
+}
+.profile-container .profile-img form img {
   width: 7rem;
   height: 7rem;
   margin: 5px;
   border: 2px solid #00ACEE;
   border-radius: 50%;
+  cursor: pointer;
 }
 @media (max-width: 480px) {
-  .profile-container .profile-img img {
+  .profile-container .profile-img form img {
     width: 3rem;
     height: 3rem;
     margin: 0;
@@ -116,6 +126,49 @@ a {
 }
 .profile-container .profile-info p {
   padding-top: 0.5rem;
+  background-color: #b2bec3;
+}
+.profile-container .profile-actions {
+  background-color: #b2bec3;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .profile-container .profile-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}
+.profile-container .profile-data {
+  width: 100%;
+  background-color: #b2bec3;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .profile-container .profile-data {
+    display: hidden;
+  }
+}
+.profile-container .profile-data-posts, .profile-container .profile-data-followers, .profile-container .profile-data-following {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  background-color: #b2bec3;
+}
+.profile-container .profile-data-posts p, .profile-container .profile-data-followers p, .profile-container .profile-data-following p {
   background-color: #b2bec3;
 }
 
@@ -225,6 +278,9 @@ a {
 }
 .tweet-card-author-data img {
   width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #00ACEE;
 }
 .tweet-card-author-data p {
   margin-left: 1rem;
