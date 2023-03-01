@@ -93,6 +93,9 @@ a {
     flex-wrap: wrap;
   }
 }
+.profile-container .profile-img {
+  background-color: #b2bec3;
+}
 .profile-container .profile-img img {
   width: 7rem;
   height: 7rem;
@@ -108,6 +111,14 @@ a {
     margin-right: 1rem;
   }
 }
+.profile-container .profile-info h3 {
+  background-color: #b2bec3;
+}
+.profile-container .profile-info p {
+  padding-top: 0.5rem;
+  background-color: #b2bec3;
+}
+
 .tweets-container {
   width: 80%;
   display: flex;

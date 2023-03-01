@@ -25,16 +25,17 @@
     }
 
     .profile {
-
-
+        
+        
+        
         @include xs {
-
+            
             @include flex($justify: flex-start, $align: flex-start);
-
         }
-
+        
         &-img {
-
+            
+            background-color: $secondary-color-dark;
             img {
                 width: 7rem;
                 height: 7rem;
@@ -53,7 +54,13 @@
 
         &-info {
 
+            h3 {
+                background-color: $secondary-color-dark;
+            }
+            p {
+                padding-top: .5rem;
+                background-color: $secondary-color-dark;
+            }
         }
     }
-
 }
