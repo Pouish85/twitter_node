@@ -2,10 +2,9 @@
     .tweet-card-author 
         .tweet-card-author-data 
             img(src="/images/default_profile.png", alt="")
-            p Robert Patulacci
+            p @#{currentUser.username}
         .tweet-card-author-action
-            //- a(href=`/tweet/edit/${tweet._id}`) 
-            a(href='#') 
+            a(href=`/tweet/edit/${tweet._id}`) 
                 i.fa-solid.fa-pen-to-square 
             a(href=`/tweet/delete/${tweet._id}`) 
                 i.fa-solid.fa-xmark

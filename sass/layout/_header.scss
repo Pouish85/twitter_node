@@ -2,16 +2,30 @@
     height: 15vh;
     padding: 15px 30px;
     box-shadow: $box-shadow;
+    background-color: white;
 
     @include flex($justify: space-between);
+
+    .logo {
+        background-color: white;
+        
+        img {
+            background-color: white;
+
+        }
+
+    }
 
     ul {
 
         width: 30%;
+        background-color: white;
         @include flex;
+
 
         li{
             margin-left: 10px;
+
         }
     }
 }

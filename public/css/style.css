@@ -18,20 +18,29 @@ a {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  background-color: #dfe6e9;
 }
 
 .top-bar {
   height: 15vh;
   padding: 15px 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
+.top-bar .logo {
+  background-color: white;
+}
+.top-bar .logo img {
+  background-color: white;
+}
 .top-bar ul {
   width: 30%;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -208,6 +217,7 @@ a {
 }
 .tweet-card-author-data p {
   margin-left: 1rem;
+  font-weight: bold;
 }
 .tweet-card-author-action a {
   color: #333;
@@ -236,7 +246,6 @@ a {
 }
 
 .content {
-  background-color: #dfe6e9;
   height: 100vh;
   display: flex;
   flex-direction: row;
