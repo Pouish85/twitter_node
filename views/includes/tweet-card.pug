@@ -2,7 +2,8 @@
     .tweet-card-author 
         .tweet-card-author-data 
             img(src=tweet.author.avatar, alt="")
-            p @#{tweet.author.username}
+            a(href=`/user/${tweet.author.username}`) 
+                p @#{tweet.author.username}
         if currentUser 
             if tweet.author._id.toString() === currentUser._id.toString()
                 .tweet-card-author-action
@@ -11,7 +12,9 @@
                     a(href=`/tweet/delete/${tweet._id}`) 
                         i.fa-solid.fa-xmark
 
-    .tweet-card-body= tweet.content
+    .tweet-card-body
+        //- p= #{Date(tweet.createdAt)}
+        p= tweet.content
     .tweet-card-actions
         i.fa-regular.fa-comment
         i.fa-regular.fa-heart
