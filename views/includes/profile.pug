@@ -19,8 +19,8 @@ if isAuthenticated
                 p 5
             .profile-data-followers 
                 p Followwers 
-                p 5
+                p= currentUser.followers.length
             .profile-data-following 
                 p Following 
-                p 5
+                p= currentUser.followings.length
 
