@@ -8,8 +8,12 @@ block content
             .user-profile-info 
                 h3 @#{user.username}
                 p #{user.firstname} #{user.lastname} 
-            .user-profile-actions
-                a(href="" class="btn btn-primary") Follow
+            if currentUser._id.toString() !== user._id.toString()
+                .user-profile-actions
+                    if currentUser.followings.includes(user._id.toString())
+                        a(href="" class="btn btn-primary") unFollow
+                    else
+                        a(href="" class="btn btn-primary") Follow
             .user-profile-data 
                 .user-profile-data-posts 
                     p Posts 

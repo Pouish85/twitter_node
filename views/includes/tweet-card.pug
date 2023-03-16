@@ -13,7 +13,8 @@
                         i.fa-solid.fa-xmark
 
     .tweet-card-body
-        //- p= #{Date(tweet.createdAt)}
+        -const tweetDate = new Date(tweet.createdAt);
+        p(class="tweetTime") Tweeté le #{tweetDate.toLocaleString()}
         p= tweet.content
     .tweet-card-actions
         i.fa-regular.fa-comment

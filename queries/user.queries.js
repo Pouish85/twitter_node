@@ -33,3 +33,9 @@ exports.findUserById = (id) => {
 exports.findUserByUsername = (username) => {
     return User.findOne({username: username}).exec();
 }
+
+exports.findUsersByQuerySearch = (search) => {
+    const regExp = `^${search}`;
+    const reg = new RegExp(`${regExp}`, "i");
+    return User.find({username: {$regex: reg}}).exec()
+}

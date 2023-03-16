@@ -23,7 +23,7 @@ app.use(morgan('short'));
 app.use(index);
 
 if(process.env.NODE_Env === "dev") {
-    app.use(errorhandler);
+    app.use(errorhandler());
 } else {
     app.use((err, req, res, next) => {
         const code = err.code || 500;

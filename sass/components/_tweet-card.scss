@@ -2,7 +2,7 @@
     width: 50%;
     border: 1px solid $text-color;
     margin-top: 2rem;
-    padding: 1.5rem;
+    padding: 1.5rem 1 rem;
     border-radius: 5px;
 
     @include xs {
@@ -25,6 +25,7 @@
             }
     
             p{
+                color: black;
                 margin-left: 1rem;
                 font-weight: bold;
             }
@@ -44,6 +45,11 @@
 
     &-body {
         padding: 1rem;
+
+        .tweetTime {
+            font-size: .8rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &-actions {

@@ -254,7 +254,7 @@ a {
   width: 50%;
   border: 1px solid #333;
   margin-top: 2rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1 rem;
   border-radius: 5px;
 }
 @media (max-width: 480px) {
@@ -283,6 +283,7 @@ a {
   border: 1px solid #00ACEE;
 }
 .tweet-card-author-data p {
+  color: black;
   margin-left: 1rem;
   font-weight: bold;
 }
@@ -294,6 +295,10 @@ a {
 }
 .tweet-card-body {
   padding: 1rem;
+}
+.tweet-card-body .tweetTime {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 .tweet-card-actions {
   margin-top: 2rem;
@@ -310,6 +315,112 @@ a {
   line-height: 1.5rem;
   cursor: pointer;
   color: #0078a8;
+}
+
+.form-new {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .form-new {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+  }
+}
+.form-new .form-title h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.form-new .form-body {
+  width: 100%;
+}
+.form-new .form-body .form-item {
+  width: 100%;
+}
+.form-new .form-body .form-item textarea, .form-new .form-body .form-item input {
+  width: 100%;
+  border: none;
+  resize: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.form-new .form-body .form-item textarea {
+  border: 1px solid #ddd;
+  height: 7rem;
+  padding: 1rem;
+}
+.form-new .form-body .form-item input {
+  font-size: 1rem;
+}
+
+.search-bar {
+  position: relative;
+}
+.search-bar form {
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.search-bar form i {
+  background-color: white;
+}
+.search-bar form input {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  border-radius: 5px;
+}
+.search-bar #search-menu-container {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  border: 1px solid #ddd;
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem;
+  z-index: 2;
+  max-height: 400px;
+  overflow: scroll;
+}
+.search-bar #search-menu-container .search-menu-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-bar #search-menu-container .search-menu-result .search-user {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-bar #search-menu-container .search-menu-result .search-user:hover {
+  background-color: #eee;
+}
+.search-bar #search-menu-container .search-menu-result .search-user:hover span {
+  background-color: #eee;
+}
+.search-bar #search-menu-container .search-menu-result .search-user img {
+  background-color: white;
+  border-radius: 50%;
+}
+.search-bar #search-menu-container .search-menu-result .search-user span {
+  margin-left: 1rem;
+  cursor: pointer;
+  background-color: white;
 }
 
 .content {
