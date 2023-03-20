@@ -22,7 +22,7 @@ exports.findTweetAndDelete = (tweetId) => {
 }
 
 exports.findTweetById = (tweetId) => {
-    return Tweet.findById(tweetId).exec();
+    return Tweet.findById(tweetId).populate('author').populate({path: 'comments', populate:{ path: "author"}}).exec();
 }
 
 exports.findTweetAndUpdate = (tweetId, body) => {

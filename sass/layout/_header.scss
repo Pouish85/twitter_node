@@ -1,31 +1,19 @@
 .top-bar {
-    height: 15vh;
-    padding: 15px 30px;
+    width: 100%;
     box-shadow: $box-shadow;
-    background-color: white;
 
-    @include flex($justify: space-between);
+    @include flex($justify: space-around);
 
-    .logo {
-        background-color: white;
-        
-        img {
-            background-color: white;
-
-        }
-
+    @include xl {
+        padding: 0 2rem;
+        @include flex($justify: space-between)
     }
 
     ul {
-
-        width: 30%;
-        background-color: white;
         @include flex;
-
-
-        li{
-            margin-left: 10px;
-
+        
+        a {
+            margin-left: 1rem;
         }
     }
 }

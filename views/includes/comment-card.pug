@@ -1,0 +1,13 @@
+.tweet-card
+    .tweet-card-author 
+        .tweet-card-author-data 
+            img(src=comment.author.avatar, alt="")
+            a(href=`/user/${comment.author.username}`) 
+                p @#{comment.author.username}
+       
+
+    .tweet-card-body
+        -const commentDate = new Date(comment.createdAt);
+        p(class="tweetTime") Commenté le #{commentDate.toLocaleString()}
+        p= comment.message
+    

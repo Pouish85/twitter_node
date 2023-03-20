@@ -17,6 +17,8 @@
         p(class="tweetTime") Tweeté le #{tweetDate.toLocaleString()}
         p= tweet.content
     .tweet-card-actions
-        i.fa-regular.fa-comment
+        a(href= `/tweet/${tweet._id}`)
+            i.fa-comment(class= tweet.comments.length > 0 ? 'fa-solid' : "fa-regular" )
+            span= tweet.comments.length
         i.fa-regular.fa-heart
         i.fa-solid.fa-retweet
