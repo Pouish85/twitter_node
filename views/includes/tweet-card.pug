@@ -4,6 +4,7 @@
             img(src=tweet.author.avatar, alt="")
             a(href=`/user/${tweet.author.username}`) 
                 p @#{tweet.author.username}
+            p= moment(tweet.createdAt).locale('fr').fromNow()
         if currentUser 
             if tweet.author._id.toString() === currentUser._id.toString()
                 .tweet-card-author-action
@@ -13,12 +14,14 @@
                         i.fa-solid.fa-xmark
 
     .tweet-card-body
-        -const tweetDate = new Date(tweet.createdAt);
-        p(class="tweetTime") Tweeté le #{tweetDate.toLocaleString()}
+        //- -const tweetDate = new Date(tweet.createdAt);
+        //- p(class="tweetTime") Tweeté le #{tweetDate.toLocaleString()}
         p= tweet.content
     .tweet-card-actions
         a(href= `/tweet/${tweet._id}`)
             i.fa-comment(class= tweet.comments.length > 0 ? 'fa-solid' : "fa-regular" )
             span= tweet.comments.length
-        i.fa-regular.fa-heart
+        a(href=`/tweet/like/${tweet._id}`) 
+            i.fa-heart(class= tweet.nbLikes > 0 ? "fa-solid" : "fa-regular")
+            span= tweet.nbLikes
         i.fa-solid.fa-retweet

@@ -1,5 +1,5 @@
 const { findByIdAndUpdate } = require("../database/models/Tweet.model");
-const { createNewTweet, findAllTweets, findTweetAndDelete, findTweetById, findTweetAndUpdate, getCurrentUserTweetsWithFollowing } = require("../queries/tweet.queries");
+const { createNewTweet, findAllTweets, findTweetAndDelete, findTweetById, findTweetAndUpdate, getCurrentUserTweetsWithFollowing, likeTweet } = require("../queries/tweet.queries");
 
 exports.createTweet = async (req, res, next) => {
     try {
@@ -68,6 +68,17 @@ exports.showTweet = async (req, res, next) => {
         const tweetId = req.params.tweetId;
         const tweet = await findTweetById(tweetId);
         res.render('tweets/tweet-show', {tweet, comments: tweet.comments ,isAuthenticated: req.isAuthenticated(), currentUser: req.user})
+    } catch (error) {
+        next(error)
+    }
+}
+
+exports.tweetLike = async (req, res, next) => {
+    try {
+        const tweetId = req.params.tweetId;
+        const user = req.user;
+        await likeTweet(tweetId, user);
+        res.redirect('/')
     } catch (error) {
         next(error)
     }

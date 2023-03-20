@@ -4,10 +4,11 @@
             img(src=comment.author.avatar, alt="")
             a(href=`/user/${comment.author.username}`) 
                 p @#{comment.author.username}
+            p= moment(comment.createdAt).locale('fr').fromNow()
        
 
     .tweet-card-body
-        -const commentDate = new Date(comment.createdAt);
-        p(class="tweetTime") Commenté le #{commentDate.toLocaleString()}
+        //- -const commentDate = new Date(comment.createdAt);
+        //- p(class="tweetTime") Commenté le #{commentDate.toLocaleString()}
         p= comment.message
     
